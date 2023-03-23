@@ -1,0 +1,77 @@
+apiVersion: console.openshift.io/v1
+kind: QuickStarts
+metadata:
+  name: getting-started
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: 'true'
+    include.release.openshift.io/self-managed-high-availability: 'true'
+    include.release.openshift.io/single-node-developer: 'true'
+    capability.openshift.io/name: Console
+  labels:
+    service-category/application-services: "true"
+    product/eap: "true"
+spec:
+  version: 0.1
+  type:
+    text: Quick start
+    color: green
+  displayName: !snippet/title README.adoc#chap-getting-started
+  description: !snippet README.adoc#description
+  durationMinutes: 10
+  icon: >-
+    data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI1LjIuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAzNyAzNyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzcgMzc7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojRUUwMDAwO30KCS5zdDF7ZmlsbDojRkZGRkZGO30KPC9zdHlsZT4KPGc+Cgk8cGF0aCBkPSJNMjcuNSwwLjVoLTE4Yy00Ljk3LDAtOSw0LjAzLTksOXYxOGMwLDQuOTcsNC4wMyw5LDksOWgxOGM0Ljk3LDAsOS00LjAzLDktOXYtMThDMzYuNSw0LjUzLDMyLjQ3LDAuNSwyNy41LDAuNUwyNy41LDAuNXoiCgkJLz4KCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xNi41LDE4LjEyYy0xLjcyLDAtMy4xMi0xLjQtMy4xMi0zLjEyczEuNC0zLjEyLDMuMTItMy4xMnMzLjEyLDEuNCwzLjEyLDMuMTJTMTguMjIsMTguMTIsMTYuNSwxOC4xMnoKCQkgTTE2LjUsMTMuMTJjLTEuMDMsMC0xLjg4LDAuODQtMS44OCwxLjg4czAuODQsMS44OCwxLjg4LDEuODhzMS44OC0wLjg0LDEuODgtMS44OFMxNy41MywxMy4xMiwxNi41LDEzLjEyeiIvPgoJPHBhdGggY2xhc3M9InN0MSIgZD0iTTEyLjk0LDExLjA2bC0yLTJjLTAuMDgtMC4wOC0wLjE4LTAuMTMtMC4yOS0wLjE1Yy0wLjAzLTAuMDEtMC4wNS0wLjAxLTAuMDctMC4wMQoJCWMtMC4xMS0wLjAxLTAuMjItMC4wMS0wLjMyLDAuMDNjMCwwLDAsMCwwLDBjLTAuMDcsMC4wMy0wLjEzLDAuMDctMC4xOCwwLjEyYy0wLjAxLDAuMDEtMC4wMSwwLjAxLTAuMDIsMC4wMWwtMiwyCgkJYy0wLjI0LDAuMjQtMC4yNCwwLjY0LDAsMC44OGMwLjEyLDAuMTIsMC4yOCwwLjE4LDAuNDQsMC4xOHMwLjMyLTAuMDYsMC40NC0wLjE4bDAuOTMtMC45M1YyMi41YzAsMC4zNSwwLjI4LDAuNjIsMC42MiwwLjYyCgkJczAuNjItMC4yOCwwLjYyLTAuNjJWMTEuMDFsMC45MywwLjkzYzAuMjQsMC4yNCwwLjY0LDAuMjQsMC44OCwwQzEzLjE5LDExLjcsMTMuMTksMTEuMywxMi45NCwxMS4wNnoiLz4KCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0yMi41LDE4LjEyYy0wLjM0LDAtMC42Mi0wLjI4LTAuNjItMC42MnYtNWMwLTAuMzUsMC4yOC0wLjYyLDAuNjItMC42MnMwLjYyLDAuMjgsMC42MiwwLjYydjUKCQlDMjMuMTIsMTcuODUsMjIuODQsMTguMTIsMjIuNSwxOC4xMnoiLz4KCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0yMC41LDI1LjEyYy0xLjcyLDAtMy4xMi0xLjQtMy4xMi0zLjEyczEuNC0zLjEyLDMuMTItMy4xMnMzLjEyLDEuNCwzLjEyLDMuMTJTMjIuMjIsMjUuMTIsMjAuNSwyNS4xMnoKCQkgTTIwLjUsMjAuMTJjLTEuMDMsMC0xLjg4LDAuODQtMS44OCwxLjg4czAuODQsMS44OCwxLjg4LDEuODhzMS44OC0wLjg0LDEuODgtMS44OFMyMS41MywyMC4xMiwyMC41LDIwLjEyeiIvPgoJPHBhdGggY2xhc3M9InN0MSIgZD0iTTI4Ljk0LDI1LjA2Yy0wLjI0LTAuMjQtMC42NC0wLjI0LTAuODgsMGwtMC45MywwLjkzVjEyLjVjMC0wLjM1LTAuMjgtMC42Mi0wLjYyLTAuNjJzLTAuNjIsMC4yOC0wLjYyLDAuNjIKCQl2MTMuNDlsLTAuOTMtMC45M2MtMC4yNC0wLjI0LTAuNjQtMC4yNC0wLjg4LDBjLTAuMjQsMC4yNC0wLjI0LDAuNjQsMCwwLjg4bDIsMmMwLjA2LDAuMDYsMC4xMywwLjExLDAuMjEsMC4xNAoJCWMwLjA4LDAuMDMsMC4xNiwwLjA1LDAuMjQsMC4wNWMwLjA4LDAsMC4xNi0wLjAyLDAuMjQtMC4wNWMwLDAsMCwwLDAsMGMwLjA3LTAuMDMsMC4xMy0wLjA3LDAuMTgtMC4xMgoJCWMwLjAxLTAuMDEsMC4wMS0wLjAxLDAuMDItMC4wMWwyLTJDMjkuMTksMjUuNywyOS4xOSwyNS4zLDI4Ljk0LDI1LjA2eiIvPgoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTE0LjUsMjUuMTJjLTAuMzQsMC0wLjYyLTAuMjgtMC42Mi0wLjYydi01YzAtMC4zNSwwLjI4LTAuNjIsMC42Mi0wLjYyczAuNjIsMC4yOCwwLjYyLDAuNjJ2NQoJCUMxNS4xMiwyNC44NSwxNC44NCwyNS4xMiwxNC41LDI1LjEyeiIvPgoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTI2LjUsMTguMTJjLTAuMzQsMC0wLjYyLTAuMjgtMC42Mi0wLjYydi01YzAtMC4zNSwwLjI4LTAuNjIsMC42Mi0wLjYyczAuNjIsMC4yOCwwLjYyLDAuNjJ2NQoJCUMyNy4xMiwxNy44NSwyNi44NCwxOC4xMiwyNi41LDE4LjEyeiIvPgoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTEwLjUsMjUuMTJjLTAuMzQsMC0wLjYyLTAuMjgtMC42Mi0wLjYydi01YzAtMC4zNSwwLjI4LTAuNjIsMC42Mi0wLjYyczAuNjIsMC4yOCwwLjYyLDAuNjJ2NQoJCUMxMS4xMiwyNC44NSwxMC44NCwyNS4xMiwxMC41LDI1LjEyeiIvPgo8L2c+Cjwvc3ZnPgo=
+  introduction: !snippet README.adoc#introduction
+  tasks:
+#    - description: >-
+#        To create a JBoss EAP 7 application:
+#
+#        1. In the main navigation, click the dropdown menu [perspective switcher]{{highlight qs-perspective-switcher}} and select **Developer**.
+#
+#        1. In the navigation menu, click [Add]{{highlight qs-nav-add}}.
+#           The **Add** page opens.
+#        1. In the **Add** page, click **Helm Chart**.
+#
+#        1. In the **Helm Charts** catalog, search for **JBoss EAP 7.4**
+#
+#            - The side panel displays information about the JBoss EAP 7 Helm chart
+#
+#        1. Click **Install Helm Chart**
+#
+#            - Some form sections are collapsed by default. Click **>** to expand and view its content.
+#              **Note:** No updates are required to these sections to proceed.
+#            - The details about the [Jakarta EE application](https://github.com/jboss-eap-up-and-running/eap7-getting-started) that you are building and deploying is specified in the `build.uri` field:
+#              ```
+#              build:
+#                  uri: https://github.com/jboss-eap-up-and-running/eap7-getting-started
+#              ```
+#              **Note:** If you are building a different application, you must change this `uri` field to point to the Git repository of that application.
+#        1.  Click **Install** to create the JBoss EAP 7 application using the Helm Chart.
+#            - The console switches to the [Topology]{{highlight qs-nav-topology}} view and displays a note that has details about the Helm release.
+#              After you read the note, you can close it.
+#      review:
+#        failedTaskHelp: This task isn’t verified yet. Try the task again.
+#        instructions: |-
+#          The Helm release is represented by a dashed box that contains the JBoss EAP icon and **eap74** text. This content is placed outside the dashed box.
+#          The deployment is indicated by a circle inside the dashed box with text **D eap74**.
+#          Verify the application was successfully created:
+#
+#          - Do you see an **eap74** Helm Release?
+#
+#          - Do you see an **eap74** deployment?
+#      summary:
+#        failed: Try the steps again.
+#        success: Your JBoss EAP7 application has been deployed onto OpenShift.
+#      title: Create a JBoss EAP7 application with Helm
+    - !snippet/proc README.adoc#proc-creating-kafka-instance
+#    - !snippet/proc README.adoc#proc-creating-kafka-instance
+#    - !snippet/proc README.adoc#proc-creating-service-account
+#    - !snippet/proc README.adoc#proc-setting-service-account-permissions
+#    - !snippet/proc README.adoc#proc-creating-kafka-topic
+  conclusion: !snippet README.adoc#conclusion
+  nextQuickStart: []
+#    - 'kafkacat'
+#    - 'kafka-bin-scripts'
+#    - 'quarkus-kafka'
+
+
+
